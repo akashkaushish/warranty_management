@@ -63,13 +63,9 @@
       <section class="sidebar" style="min-height:550px;">
         <div class="block_content">
           <ul class="nav dashboard_list">
-            <li><a href="{{ url('admin/home') }}"><span class="icon"><i class="fas fa-tv"></i></span>Dashboard</a></li>
-            <li><a href="{{ url('/warrantylist') }}"><span class="icon"><i class="fas fa-shopping-bag"></i></span>Manage Warranty Plan</a></li>
-            <li><a href="{{ url('/list') }}"><span class="icon"><i class="fas fa-heart"></i></span>Activate Warranty</a></li>
-            <!--<li><a href="#"><span class="icon"><i class="fas fa-download"></i></span>Downloads</a></li>
-            <li><a href="#"><span class="icon"><i class="fas fa-house-user"></i></span>Addresses</a></li>
-            <li><a href="#"><span class="icon"><i class="far fa-credit-card"></i></span>Payment Methods</a></li>
-            <li><a href="#"><span class="icon"><i class="fas fa-user-alt"></i></span>Account Details</a></li>-->
+            <li class="{{ (request()->is('admin/home')) ? 'active' : '' }}"><a href="{{ url('admin/home') }}"><span class="icon"><i class="fas fa-tv"></i></span>Dashboard</a></li>
+            <li class="{{ (request()->is('warrantylist')) ? 'active' : '' }}"><a href="{{ url('/warrantylist') }}"><span class="icon"><i class="fas fa-shopping-bag"></i></span>Manage Warranty Plan</a></li>
+            <li class="{{ (request()->is('list')) ? 'active' : '' }}"><a href="{{ url('/list') }}" ><span class="icon"><i class="fas fa-heart"></i></span>Activate Warranty</a></li>
             <li>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

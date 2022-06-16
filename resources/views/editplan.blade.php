@@ -1,6 +1,11 @@
 @extends('layouts.adminapp')
 
 @section('content')
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-8">
@@ -38,13 +43,13 @@
           <div class="row mb-3">
             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Sale Date') }}</label>
             <div class="col-md-6">
-              <input id="sale_date" type="text" class="form-control @error('sale_date') is-invalid @enderror" name="sale_date" value="{{ $planinfo['sale_date'] }}"  autocomplete="plan_name" required>
+              <input id="datepicker" type="text" class="form-control @error('sale_date') is-invalid @enderror" name="sale_date" value="{{ $planinfo['sale_date'] }}"  autocomplete="plan_name" required>
               @error('sale_date') <span class="invalid-feedback" role="alert"> <strong>{{ $message }}</strong> </span> @enderror </div>
           </div>
           <div class="row mb-3">
             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Delivery Date') }}</label>
             <div class="col-md-6">
-              <input  type="text" class="form-control @error('delivery_date') is-invalid @enderror" name="delivery_date" value="{{ $planinfo['delivery_date'] }}"  autocomplete="delivery_date" required>
+              <input  type="text"  id="delivery_date" class="form-control @error('delivery_date') is-invalid @enderror" name="delivery_date" value="{{ $planinfo['delivery_date'] }}"  autocomplete="delivery_date" required>
               @error('delivery_date') <span class="invalid-feedback" role="alert"> <strong>{{ $message }}</strong> </span> @enderror </div>
           </div>
           <div class="row mb-3">
@@ -72,3 +77,9 @@
 </div>
 </div>
 @endsection 
+<script type="text/javascript">
+$( "#datepicker,#delivery_date" ).datepicker({
+ format: 'yyyy-mm-dd'
+
+});
+</script>
