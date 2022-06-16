@@ -22,6 +22,36 @@
                 @error('email') <span class="invalid-feedback" role="alert"> <strong>{{ $message }}</strong> </span> @enderror </div>
             </div>
             <div class="row mb-3">
+              <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Company Name') }}</label>
+              <div class="col-md-6">
+                <input id="company_name" type="text" class="form-control @error('company_name') is-invalid @enderror" name="company_name" value="{{ old('company_name') }}" required autocomplete="company_name" autofocus>
+                @error('company_name') <span class="invalid-feedback" role="alert"> <strong>{{ $message }}</strong> </span> @enderror </div>
+            </div>
+            <div class="row mb-3">
+              <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Address') }}</label>
+              <div class="col-md-6">
+                <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" autofocus>
+                @error('address') <span class="invalid-feedback" role="alert"> <strong>{{ $message }}</strong> </span> @enderror </div>
+            </div>
+            <div class="row mb-3">
+              <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Website') }}</label>
+              <div class="col-md-6">
+                <input id="website" type="text" class="form-control @error('website') is-invalid @enderror" name="website" value="{{ old('website') }}" required autocomplete="website" autofocus>
+                @error('website') <span class="invalid-feedback" role="alert"> <strong>{{ $message }}</strong> </span> @enderror </div>
+            </div>
+            <div class="row mb-3">
+              <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Phone Number') }}</label>
+              <div class="col-md-6">
+                <input id="phone_number" type="text" class="form-control @error('phone_number') is-invalid @enderror" name="phone_number" value="{{ old('phone_number') }}" required autocomplete="phone_number" autofocus>
+                @error('phone_number') <span class="invalid-feedback" role="alert"> <strong>{{ $message }}</strong> </span> @enderror </div>
+            </div>
+            <div class="row mb-3">
+              <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Mobile Number') }}</label>
+              <div class="col-md-6">
+                <input id="mobile_number" type="text" class="form-control @error('mobile_number') is-invalid @enderror" name="mobile_number" value="{{ old('mobile_number') }}" required autocomplete="mobile_number" autofocus>
+                @error('mobile_number') <span class="invalid-feedback" role="alert"> <strong>{{ $message }}</strong> </span> @enderror </div>
+            </div>
+            <div class="row mb-3">
               <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
               <div class="col-md-6">
                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">

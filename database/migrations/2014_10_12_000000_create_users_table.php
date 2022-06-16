@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-
+ 
 class CreateUsersTable extends Migration
 {
     /**
@@ -18,6 +18,11 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
+			$table->string('company_name');
+			$table->string('address');
+			$table->string('website');
+			$table->string('phone_number');
+			$table->string('mobile_number');
             $table->boolean('is_admin')->nullable();
             $table->string('password');
             $table->rememberToken();
