@@ -36,19 +36,13 @@
             <div class="row mb-3">
               <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Website') }}</label>
               <div class="col-md-6">
-                <input id="website" type="text" class="form-control @error('website') is-invalid @enderror" name="website" value="{{ old('website') }}" required autocomplete="website" autofocus>
+                <input id="website" type="text" class="form-control @error('website') is-invalid @enderror" name="website" value="{{ old('website') }}" autocomplete="website" autofocus>
                 @error('website') <span class="invalid-feedback" role="alert"> <strong>{{ $message }}</strong> </span> @enderror </div>
-            </div>
-            <div class="row mb-3">
-              <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Phone Number') }}</label>
-              <div class="col-md-6">
-                <input id="phone_number" type="text" class="form-control @error('phone_number') is-invalid @enderror" name="phone_number" value="{{ old('phone_number') }}" required autocomplete="phone_number" autofocus>
-                @error('phone_number') <span class="invalid-feedback" role="alert"> <strong>{{ $message }}</strong> </span> @enderror </div>
             </div>
             <div class="row mb-3">
               <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Mobile Number') }}</label>
               <div class="col-md-6">
-                <input id="mobile_number" type="text" class="form-control @error('mobile_number') is-invalid @enderror" name="mobile_number" value="{{ old('mobile_number') }}" required autocomplete="mobile_number" autofocus>
+                <input id="mobile_number" type="text" class="form-control @error('mobile_number') is-invalid @enderror" name="mobile_number" value="{{ old('mobile_number') }}" autocomplete="mobile_number" autofocus>
                 @error('mobile_number') <span class="invalid-feedback" role="alert"> <strong>{{ $message }}</strong> </span> @enderror </div>
             </div>
             <div class="row mb-3">
