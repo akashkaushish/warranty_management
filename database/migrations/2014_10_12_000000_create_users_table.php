@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
 			$table->string('address');
 			$table->string('website')->nullable();
 			$table->string('mobile_number')->nullable();
+			$table->string('user_key');
             $table->boolean('is_admin')->nullable();
             $table->string('password');
             $table->rememberToken();

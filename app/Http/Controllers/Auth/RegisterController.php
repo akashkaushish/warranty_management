@@ -71,6 +71,7 @@ class RegisterController extends Controller
 			'company_name' => $data['company_name'],
 			'address' => $data['address'],
 			'website' => $data['website'],
+			'user_key' => md5(time().''.rand(1,99999999)),
 			'mobile_number' => $data['mobile_number'],
             'password' => Hash::make($data['password']),
         ]);
