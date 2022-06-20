@@ -64,8 +64,8 @@
         <div class="block_content">
           <ul class="nav dashboard_list">
             <li class="{{ (request()->is('admin/home')) ? 'active' : '' }}"><a href="{{ url('admin/home') }}"><span class="icon"><i class="fas fa-tv"></i></span>Dashboard</a></li>
-            <li class="{{ (request()->is('warrantylist')) ? 'active' : '' }}"><a href="{{ url('/warrantylist') }}"><span class="icon"><i class="fas fa-shopping-bag"></i></span>Manage Warranty Plan</a></li>
-            <li class="{{ (request()->is('list')) ? 'active' : '' }}"><a href="{{ url('/list') }}" ><span class="icon"><i class="fas fa-heart"></i></span>Activate Warranty</a></li>
+            <li class="{{ (request()->is('userlist')) ? 'active' : '' }}"><a href="{{ url('/userlist') }}"><span class="icon"><i class="fas fa-users"></i></span>Manage Users</a></li>
+           
             <li>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

@@ -25,6 +25,10 @@ class User extends Authenticatable
 		'website',
 		'user_key',
 		'mobile_number',
+		'is_db_created',
+		'is_repo_created',
+		'is_env_configured',
+		'setup_url',
         'password',
         'is_admin',
     ];
