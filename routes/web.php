@@ -28,7 +28,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 
 //User plan Route
-Route::get('userlist', [UsersController::class, 'userlisting']);
+Route::get('admin/userlist', [UsersController::class, 'userlisting'])->name('admin.userlisting')->middleware('is_admin');
 /*Route::get('editwarranty/{id}', [WarrantyplanController::class, 'editWarranty'])->middleware('is_admin');
 Route::get('delete/{id}', [WarrantyplanController::class, 'delete'])->middleware('is_admin');
 Route::post('update', [WarrantyplanController::class, 'updateWarranty'])->middleware('is_admin');

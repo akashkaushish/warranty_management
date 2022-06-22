@@ -64,7 +64,7 @@
         <div class="block_content">
           <ul class="nav dashboard_list">
             <li class="{{ (request()->is('admin/home')) ? 'active' : '' }}"><a href="{{ url('admin/home') }}"><span class="icon"><i class="fas fa-tv"></i></span>Dashboard</a></li>
-            <li class="{{ (request()->is('userlist')) ? 'active' : '' }}"><a href="{{ url('/userlist') }}"><span class="icon"><i class="fas fa-users"></i></span>Manage Users</a></li>
+            <li class="{{ (request()->is('admin/userlist')) ? 'active' : '' }}"><a href="{{ url('admin/userlist') }}"><span class="icon"><i class="fas fa-users"></i></span>Manage Customers</a></li>
            
             <li>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="{{ route('logout') }}"
